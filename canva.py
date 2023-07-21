@@ -15,3 +15,6 @@ print(texto_original)
 print("\nTexto com espaçamento ajustado:")
 print(texto_ajustado)
 
+#meu comentário#
+
+
