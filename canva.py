@@ -1,3 +1,6 @@
+def soma (a,b):
+    return a+b
+
 def adjust_letter_spacing(text, spacing):
     adjusted_text = " "
     for char in text:
