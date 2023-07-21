@@ -1,0 +1,28 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # Instalar as dependências necessárias para o pytest
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.x
+
+      # Instalar as dependências do projeto (caso existam)
+      - name: Install Dependencies
+        run: pip install -r requirements.txt
+
+      # Executar os testes com pytest
+      - name: Run Tests
+        run: pytest
