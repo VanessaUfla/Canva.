@@ -1,19 +1,17 @@
 # def soma (a,b):
 #     return a+b
 
-def cadastrar_template():
-    while True:
-        nome = input("Digite o nome do template: ")
-        cor = input("Digite a cor do template: ")
-        tema = input("Digite o tema do template: ")
+templates = []
 
-        print("\nTemplate cadastrado com sucesso!")
-        print(nome, ",", cor, ",", tema)
-
-        resposta = input("\nDeseja cadastrar outro template? (S/N): ")
-        if resposta != "s":
-            break
-
+def cadastrar_template(n, c, t):
+    template ={}
+    if not n:
+         return False
+    template["nome"] = n
+    template["cor"] = c
+    template["tema"] = t
+    templates.append(template)
+    return True
 
 def adjust_letter_spacing(text, spacing):
     adjusted_text = " "
@@ -26,10 +24,11 @@ texto_original = "Bem vindo ao canva."
 espacamento_desejado = 2
 texto_ajustado = adjust_letter_spacing(texto_original, espacamento_desejado)
 
-print("Texto original:")
-print(texto_original)
+# print("Texto original:")
+# print(texto_original)
 
-print("\nTexto com espaçamento ajustado:")
-print(texto_ajustado)
+# print("\nTexto com espaçamento ajustado:")
+# print(texto_ajustado)
 
-cadastrar_template()
+
+
