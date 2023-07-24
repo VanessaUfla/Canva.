@@ -10,7 +10,7 @@ def cadastrar_template(n, c, t):
     template["nome"] = n
     template["cor"] = c
     template["tema"] = t
-    templates.append(template)
+    #templates.append(template)
     return True
 
 def adjust_letter_spacing(text, spacing):
